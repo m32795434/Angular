@@ -1,2 +1,6 @@
 <!-- <app-contador></app-contador> -->
-<app-heroe></app-heroe>
+<h1>{{title}}</h1>
+<h3>La base es <strong>{{base}}</strong></h3>
+<button (click)="acumulate(-base)">-{{base}}</button>
+<span>{{acum}}</span>
+<button (click)="acumulate(base)">+{{base}}</button>
