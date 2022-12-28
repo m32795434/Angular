@@ -1,0 +1,19 @@
+<h1>{{name}}</h1>
+<dl>
+    <dt>Name:</dt>
+    <dd>{{name}}</dd>
+    <dt>Age:</dt>
+    <dd>{{age}}</dd>
+    <dt>Show all its data:</dt>
+    <dd>{{showData()}}</dd>
+    <dt>To upperCase</dt>
+    <dd>{{name | uppercase}}</dd>
+    <dt>To upperCase by a pseudo property"</dt>
+    <dd>{{toUpperCaseName}}</dd>
+</dl>
+<button (click)="changeName()">
+    Change Heroe
+</button>
+<button (click)="changeAge()">
+    Change Age
+</button>
