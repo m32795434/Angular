@@ -8,6 +8,7 @@ import { dataBindingComponent } from './dataBinding/dataBinding.component';
 import { TestingExpressions } from './expressions.component';
 import { HelloComponent } from './hello.component';
 import { HeroeComponent } from './heroes/heroe/heroe.component';
+import { ListingComponent } from './heroes/listing/listing.component';
 //js modules end
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HeroeComponent } from './heroes/heroe/heroe.component';
     HelloComponent,
     AppAccounter,
     HeroeComponent,
-    dataBindingComponent
+    dataBindingComponent,
+    ListingComponent
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location.
