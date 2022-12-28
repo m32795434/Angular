@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppAccounter } from './accountant/accountant.component';
 import { AppComponent } from './app.component';
+import { dataBindingComponent } from './dataBinding/dataBinding.component';
 import { TestingExpressions } from './expressions.component';
 import { HelloComponent } from './hello.component';
 import { HeroeComponent } from './heroes/heroe/heroe.component';
@@ -15,7 +16,8 @@ import { HeroeComponent } from './heroes/heroe/heroe.component';
     TestingExpressions,
     HelloComponent,
     AppAccounter,
-    HeroeComponent
+    HeroeComponent,
+    dataBindingComponent
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location.
