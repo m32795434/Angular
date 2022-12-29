@@ -1,0 +1,10 @@
+<h3>Add - {{newChar.name}}</h3>
+<hr>
+<!-- we could pass the $event to the controller and call the event.preventDefault(), too -->
+<form (ngSubmit)="addChar($event)">
+    <!-- [(ngModel)] send and receive -->
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="newChar.name">
+    <!-- [value]="newChar.name" (input)="changeName($event)" -->
+    <input type="number" name="power" [(ngModel)]="newChar.power">
+    <button type="submit">Add</button>
+</form>
