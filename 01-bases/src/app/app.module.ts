@@ -2,13 +2,13 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppAccounter } from './accountant/accountant.component';
+import { AccountantModule } from './accountant/accountant.module';
 import { AppComponent } from './app.component';
 import { dataBindingComponent } from './dataBinding/dataBinding.component';
+import { DbzModule } from './dbz/dbz.module';
 import { TestingExpressions } from './expressions.component';
 import { HelloComponent } from './hello.component';
-import { HeroeComponent } from './heroes/heroe/heroe.component';
-import { ListingComponent } from './heroes/listing/listing.component';
+import { HeroesModule } from './heroes/heroes.module';
 //js modules end
 
 @NgModule({
@@ -16,14 +16,14 @@ import { ListingComponent } from './heroes/listing/listing.component';
     AppComponent,//class, that is a component, because its decorator. 
     TestingExpressions,
     HelloComponent,
-    AppAccounter,
-    HeroeComponent,
     dataBindingComponent,
-    ListingComponent
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location.
-    FormsModule],
+    FormsModule,
+    HeroesModule,
+    AccountantModule,
+    DbzModule],
   providers: [],//Providers of services that components in other NgModules can use.
   bootstrap: [AppComponent]//a class//El componente raíz
 })
