@@ -1,0 +1,25 @@
+<h1>Dragon ball Z</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <h3>Characters</h3>
+        <hr>
+        <ul>
+            <li>Krillin - 700</li>
+            <li>Goku - 15000</li>
+            <li>Vegetta - 8500</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h3>Add - {{newChar.name}}</h3>
+        <hr>
+        <!-- we could pass the $event to the controller and call the event.preventDefault(), too -->
+        <form (ngSubmit)="addChar()">
+            <!-- [(ngModel)] send and receive -->
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="newChar.name">
+            <!-- [value]="newChar.name" (input)="changeName($event)" -->
+            <input type="number" placeholder="Power" name="power" [(ngModel)]="newChar.power">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
