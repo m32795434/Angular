@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../interfaces/dbz.interface';
 
 @Component({
@@ -6,18 +6,19 @@ import { Character } from '../interfaces/dbz.interface';
   templateUrl: './add.component.html',
 })
 export class AddComponent {
-  @Input() characters: Character[] = [];
   newChar: Character = {
-    name: '',
-    power: 0,
+    name: 'Maestro Roshi',
+    power: 1000,
   }
+  @Output() onNewChar: EventEmitter<Character> = new EventEmitter();
   addChar(e: Event) {
     if (!(this.newChar.name.trim())) {
       return;
     }
-    this.characters.push(this.newChar);
-    // const t: any = e.target;
-    // if (t) { t.reset() }
+    console.log(this.newChar);
+    this.onNewChar.emit(this.newChar);
     this.newChar = { name: '', power: 0 };//we set another obj to lose reference to the earlier
+    // const t: any = e.target;
+    // if (t) { t.reset() }//reset form
   }
 }

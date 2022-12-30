@@ -8,4 +8,7 @@ import { Character } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent {
   characters: Character[] = [{ name: 'Goku', power: 15000 }, { name: 'Vegeta', power: 7500 }];
+  addNewChar(e: Character): void {
+    this.characters.push(e);
+  }
 }
