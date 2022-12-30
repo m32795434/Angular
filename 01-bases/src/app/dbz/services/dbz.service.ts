@@ -9,5 +9,8 @@ export class DbzService {
     constructor() {
         console.log('initialized DbzService')
     }
+    addChar(char: Character) {
+        this._characters.push(char);
+    }
 }
 

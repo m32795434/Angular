@@ -10,7 +10,5 @@ export class CharactersComponent {
   //@Input('asSomething')
   // @Input() chars: Character[] = [];
   constructor(private dbzService: DbzService) { }
-  get characters(): Character[] {
-    return this.dbzService.characters;
-  }
+  get characters(): Character[] { return this.dbzService.characters; }
 }
