@@ -12,14 +12,20 @@ export class AddComponent {
     name: 'Maestro Roshi',
     power: 1000,
   }
-  //@Output() onNewChar: EventEmitter<Character> = new EventEmitter();
+  /*
+    //this child can send data to its father "app-main-page"
+    @Output() onNewChar: EventEmitter<Character> = new EventEmitter();
+    addChar(e:Event){
+    this.onNewChar.emit(this.newChar);
+    this.newChar = { name: '', power: 0 };
+    }*/
+
   addChar(e: Event) {
     if (!(this.newChar.name.trim())) {
       return;
     }
     console.log(this.newChar);
     this.dbzService.addChar(this.newChar);
-    //this.onNewChar.emit(this.newChar);
     this.newChar = { name: '', power: 0 };//we set another obj to lose reference to the earlier
     // const t: any = e.target;
     // if (t) { t.reset() }//reset form

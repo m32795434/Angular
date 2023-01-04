@@ -26,9 +26,9 @@ import { Component } from "@angular/core";
         <li>{{ helloWorld() }}</li>
         <li>{{birthday | date:'dd/MM/YYYY hh:mm a zzzz'}}</li>
       </ul>
-      
-<hello name="Pepe"></hello>
-
+      <!-- The parent (testingExpressions) is sending data to the child (hello) who has a @Input property-->
+      <!-- name={{fruta}} too -->
+      <hello [name]=fruta></hello> 
 </div>
     `,
 })
