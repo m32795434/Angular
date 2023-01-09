@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class ListingComponent {
   heroes: string[] = ['Ironman', 'Thor', 'Hulk'];
   deletedHeroe: string = '';
+  heroe: string = 'cococha';
   deleteHeroe(): void {
     this.deletedHeroe = this.heroes.shift() || '';
   }

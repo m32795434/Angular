@@ -28,7 +28,9 @@ import { Component } from "@angular/core";
       </ul>
       <!-- The parent (testingExpressions) is sending data to the child (hello) who has a @Input property-->
       <!-- name={{fruta}} too -->
-      <hello [name]=fruta></hello> 
+      <hello [name]="fruta"></hello> 
+      <!-- not a property binding...this is static -->
+      <hello name="fruta"></hello> 
 </div>
     `,
 })

@@ -20,7 +20,8 @@ export class AddComponent {
     this.newChar = { name: '', power: 0 };
     }*/
 
-  addChar(e: Event) {
+  addChar(e: HTMLFormElement) {
+    console.log(e);
     if (!(this.newChar.name.trim())) {
       return;
     }

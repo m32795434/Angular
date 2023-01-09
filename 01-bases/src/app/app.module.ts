@@ -19,7 +19,7 @@ import { HeroesModule } from './heroes/heroes.module';
     dataBindingComponent,
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
-    BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location.
+    BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location. Exports required infrastructure for all Angular apps. Included by default in all Angular apps created with the CLI new command. Re-exports CommonModule and ApplicationModule
     FormsModule,
     HeroesModule,
     AccountantModule,

@@ -2,6 +2,7 @@
     <h3>Deleted Heroe</h3>
     Deleted Heroe: <small>{{deletedHeroe}}</small><br>
 </div>
+<!-- TEMPLATE REFERECE VARIABLE, #notDeleted -->
 <ng-template #notDeleted>
     <h3>Nothing removed!</h3>
     <br>
@@ -9,6 +10,8 @@
 <button (click)="deleteHeroe()">Delete Heroe</button>
 <p>Listing Heroes!</p>
 <ul>
+    <!-- The let keyword declares a TEMPLATE INPUT VARIABLE that you can reference within the template. -->
+    <!-- Template context names take precedence over component context names. In the preceding {{heroe}}, the hero is the template input variable, not the component's hero property. -->
     <li *ngFor="let heroe of heroes; let i = index">
         {{i + 1}} - {{heroe}}
     </li>
