@@ -1,0 +1,43 @@
+<h2>Uso de *ngIf </h2>
+
+<label for="is-true-state">State: </label>
+<br>
+<select name="is-true-state" id="is-true-state" (input)="setState($event)">
+    <option value="">- Select a state -</option>
+    <option value="false">False</option>
+    <option value="true">True</option>
+</select>
+
+<p>El valor de identidad_secreta es: <b>{{revelar_identidad}}</b></p>
+<p>entonces Ironman es <span *ngIf="revelar_identidad">{{ironman}}</span></p>
+
+<div *ngIf="revelar_identidad;then no_secreto else secreto"></div>
+<ng-template #secreto>
+    <p>¿Quien es IronMan?...</p>
+</ng-template>
+<ng-template #no_secreto>
+    <p>{{ironman}}</p>
+</ng-template>
+
+<label for="select-armor">Select Armor</label><br>
+<select name="armor" id="armor" (input)="selectArmor($event)">
+    <option value=""> - Select Armor - </option>
+    <option *ngFor="let armadura of armaduras" [value]="armadura">{{armadura}}</option>
+</select>
+<h2>Uso de *ngFor con *ngSwitch</h2>
+<p>Las armaduras usadas por IronMan son:</p>
+<ul [ngSwitch]="usar">
+    <li *ngFor="let armadura of armaduras">
+        {{armadura}}<strong *ngSwitchCase="armadura">{{default? ' - Default -':' - Selected! -'}}</strong>
+    </li>
+</ul>
+
+<h2>Uso de *ngSwitch con *ngSwitchCase</h2>
+<ul [ngSwitch]="superhero">
+    <li *ngSwitchCase="'Groot'">Groot</li>
+    <li *ngSwitchCase="'Ironman'">Ironman</li>
+    <li *ngSwitchCase="'Hulk'">Hulk</li>
+    <li *ngSwitchCase="'Thor'">Thor</li>
+    <li *ngSwitchCase="'Spiderman'">Spiderman</li>
+    <li *ngSwitchDefault>Batman</li>
+</ul>

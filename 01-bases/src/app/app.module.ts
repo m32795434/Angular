@@ -9,6 +9,8 @@ import { DbzModule } from './dbz/dbz.module';
 import { TestingExpressions } from './expressions.component';
 import { HelloComponent } from './hello.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { HiddenDirective } from './dataBinding/hidden.directive';
+import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgIf.component';
 //js modules end
 
 @NgModule({
@@ -17,6 +19,8 @@ import { HeroesModule } from './heroes/heroes.module';
     TestingExpressions,
     HelloComponent,
     dataBindingComponent,
+    HiddenDirective,
+    NgSwitchNgForNgIfComponent
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location. Exports required infrastructure for all Angular apps. Included by default in all Angular apps created with the CLI new command. Re-exports CommonModule and ApplicationModule

@@ -31,9 +31,13 @@ import { Component } from "@angular/core";
 <!--data binding using (ngModel), which is basically the combination of both the square brackets of property binding and parentheses of the event binding. -->
 <br>
 Please enter some text:<input type="text" [(ngModel)]="val"><br>
-Text entered: {{val.trim()}}`
+Text entered: {{val.trim()}}
+<p [hidden]="shouldHidde" [ngClass]="{'special':shouldHidde, 'wrap': shouldHidde, 'dark':shouldHidde}">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis iusto incidunt eius enim nemo, itaque id! Dolorum dignissimos cum natus voluptates pariatur autem praesentium? Eos voluptatum obcaecati explicabo odit assumenda.</p>
+`
+
 })
 export class dataBindingComponent {
+    shouldHidde = true;//we have a hidden Directive(), a hidden attribute and property. They are working together. This may bring us conflict
     firstName: string = 'Manuel';
     lastName: string = 'Bravard';
     blue: string = 'blue';
