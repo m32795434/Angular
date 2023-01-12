@@ -1,0 +1,73 @@
+<!-- Data binding works with properties of DOM elements, components, and directives, not HTML attributes. (except that we can use [attr.attributeName]="statement")-->
+<!-- In Angular, the only role of HTML attributes is to initialize element and directive state. -->
+<!-- Attributes initialize DOM properties and you can configure them to modify an element's behavior. Properties are features of DOM nodes. -->
+<!-- data binding: from the component to the view -->
+<!-- using the interpolation technique.  -->
+<div><strong>{{firstName}}</strong></div>
+<!-- Let's consider another example using property binding. -->
+<span [innerHTML]="lastName">-Directive-</span>
+<!-- example of style binding (property binding). -->
+<h1 [style.color]="blue">I am a blue h1, and I'm using a Directive</h1>
+<!-- Property and attribute comparison -->
+<input [disabled]="!(val.trim())? true : false">
+<input [attr.disabled]="!(val.trim())? 'disabled' : null">
+
+
+<!-- From View to Component, One-way data binding-->
+
+<!-- event binding technique. -->
+<!-- Template statements are methods or properties that you can use in your HTML to respond to user events.  -->
+<!-- (target event like) = Template statements -->
+<button (click)="myFunction()">Show Alert</button>
+
+<!-- Two-way Data Binding in Angular -->
+<!-- Two-way data binding in Angular will help users to exchange data from the component to view and from view to the component.  -->
+<!--data binding using (ngModel), which is basically the combination of both the square brackets of property binding and parentheses of the event binding. -->
+<br>
+Please enter some text:<input type="text" [(ngModel)]="val"><br>
+Text entered: {{val.trim()}}
+<p [hidden]="shouldHidde" [ngClass]="{'special':shouldHidde, 'wrap': shouldHidde, 'dark':shouldHidde}">Lorem ipsum
+    dolor, sit amet consectetur adipisicing elit. Debitis iusto incidunt eius enim nemo, itaque id! Dolorum dignissimos
+    cum natus voluptates pariatur autem praesentium? Eos voluptatum obcaecati explicabo odit assumenda.</p>
+
+<!-- Arg Programa Example -->
+<h2>Formlario con binding</h2>
+<!--
+  En el caso [(ngModel)]="nombre", es un doble binding
+-->
+<div>
+    <div>
+        <div>
+            Nombre:
+            <input placeholder="Ingrese su nombre" type="text" [(ngModel)]="nombre" />
+        </div>
+        <br />
+        <div>
+            Teléfono:
+            <input placeholder="ingrese su telefono" type="number" [(ngModel)]="telefono" />
+        </div>
+        <br />
+        <div>
+            <!-- En el caso del DNI se obtiene el doble binding usando el método ngModelChange -->
+            DNI:
+            <input placeholder="ingrese su dni" type="number" [ngModel]="dni" (ngModelChange)="cambiaDni($event)" />
+        </div>
+    </div>
+    <br />
+    <div>
+        Tú nombre es:
+        <span *ngIf="nombre">
+            <b>{{nombre}}</b> y tiene {{nombre.length}} <b>letras</b>,esto es mágia.
+        </span>
+    </div>
+    <br />
+    <div>Tú telefono es:
+        <span *ngIf="telefono">
+            <b>{{telefono}}</b> y tiene {{telefono.length}}<b>digitos</b>.
+        </span>
+    </div>
+    <br />
+    <div>Tú dni es: <b>{{dni}}</b></div>
+    <br />
+    <div class="click" (click)="onClick()">Haceme click!</div>
+</div>
