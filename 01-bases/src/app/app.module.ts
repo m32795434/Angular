@@ -11,6 +11,7 @@ import { HelloComponent } from './hello.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { HiddenDirective } from './dataBinding/hidden.directive';
 import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgIf.component';
+
 //js modules end
 
 @NgModule({
