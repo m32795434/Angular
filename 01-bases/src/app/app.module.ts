@@ -11,6 +11,9 @@ import { HelloComponent } from './hello.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { HiddenDirective } from './dataBinding/hidden.directive';
 import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgIf.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdDropdownConfig } from './dropDown-config';
+import { NgbdPopoverAutoclose } from './popOverAutoClose';
 
 //js modules end
 
@@ -28,7 +31,8 @@ import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgI
     FormsModule,
     HeroesModule,
     AccountantModule,
-    DbzModule],
+    DbzModule,
+    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose],
   providers: [],//Providers of services that components in other NgModules can use.
   bootstrap: [AppComponent]//a class//El componente raíz
 })
