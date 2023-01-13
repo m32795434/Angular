@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccountantModule } from './accountant/accountant.module';
 import { AppComponent } from './app.component';
-import { dataBindingComponent } from './dataBinding/dataBinding.component';
+import { DataBindingComponent } from './dataBinding/dataBinding.component';
 import { DbzModule } from './dbz/dbz.module';
 import { TestingExpressions } from './expressions.component';
 import { HelloComponent } from './hello.component';
@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDropdownConfig } from './dropDown-config';
 import { NgbdPopoverAutoclose } from './popOverAutoClose';
 import { CatModule } from './cats/cat.module';
+import { AppRoutingModule } from './app-routing.module';
 
 //js modules end
 
@@ -23,7 +24,7 @@ import { CatModule } from './cats/cat.module';
     AppComponent,//class, that is a component, because its decorator. 
     TestingExpressions,
     HelloComponent,
-    dataBindingComponent,
+    DataBindingComponent,
     HiddenDirective,
     NgSwitchNgForNgIfComponent
   ],
@@ -33,7 +34,7 @@ import { CatModule } from './cats/cat.module';
     HeroesModule,
     AccountantModule,
     DbzModule,
-    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose, CatModule],
+    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose, CatModule, AppRoutingModule],
   providers: [],//Here: Providers of services that components in other NgModules can use.(It's for the root injector)
   bootstrap: [AppComponent]//a class//El componente raíz
 })

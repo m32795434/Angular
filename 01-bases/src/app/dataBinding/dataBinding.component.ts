@@ -5,7 +5,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     selector: 'app-dataBinding',
     templateUrl: 'dataBinding.html'
 })
-export class dataBindingComponent {
+export class DataBindingComponent {
     shouldHidde = true;//we have a hidden Directive(), a hidden attribute and property. They are working together. This may bring us conflict
     firstName: string = 'Manuel';
     lastName: string = 'Bravard';
