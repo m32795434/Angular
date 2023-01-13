@@ -14,6 +14,7 @@ import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgI
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDropdownConfig } from './dropDown-config';
 import { NgbdPopoverAutoclose } from './popOverAutoClose';
+import { CatModule } from './cats/cat.module';
 
 //js modules end
 
@@ -32,8 +33,8 @@ import { NgbdPopoverAutoclose } from './popOverAutoClose';
     HeroesModule,
     AccountantModule,
     DbzModule,
-    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose],
-  providers: [],//Providers of services that components in other NgModules can use.
+    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose, CatModule],
+  providers: [],//Here: Providers of services that components in other NgModules can use.(It's for the root injector)
   bootstrap: [AppComponent]//a class//El componente raíz
 })
 export class AppModule { }//class, that is a Module, because its decorator. An NgModule can export only the declarable classes it owns or imports from other NgModules

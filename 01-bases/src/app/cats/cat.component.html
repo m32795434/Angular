@@ -1,0 +1,4 @@
+<p> Generemos una imagen de gatitos con texto </p>
+<input id="say" type="text" value="" [(ngModel)]="say">
+<button (click)="onSay(say)">Generar imagen</button>
+<app-catList toSayInput="{{toSayFather}}"></app-catList>
