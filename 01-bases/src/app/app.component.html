@@ -1,18 +1,19 @@
 <div class="container">
+    <nav>
+
+    </nav>
     <div class="row justify-content-center">
         <div class="col col-lg-6">
             <ngbd-dropdown-config></ngbd-dropdown-config>
             <ngbd-popover-autoclose></ngbd-popover-autoclose>
-            <app-accountant></app-accountant>
+            <!-- <app-accountant></app-accountant>
             <testingExpressions></testingExpressions>
             <app-heroes></app-heroes>
-            <app-dataBinding (emiter)="recibir($event)"></app-dataBinding>
-            <span *ngIf="content.nodeName">Hicimos click sobre el elemento: {{content.nodeName}} - id:
-                {{content.id}}</span>
-
+            <app-data-binding-wrapper></app-data-binding-wrapper>
             <app-main-page></app-main-page>
             <app-ngSwitchNgForNgIf></app-ngSwitchNgForNgIf>
-            <app-cat></app-cat>
+            <app-cat></app-cat> -->
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

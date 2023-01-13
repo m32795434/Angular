@@ -16,6 +16,7 @@ import { NgbdDropdownConfig } from './dropDown-config';
 import { NgbdPopoverAutoclose } from './popOverAutoClose';
 import { CatModule } from './cats/cat.module';
 import { AppRoutingModule } from './app-routing.module';
+import { DataBindingWrapperComponent } from './dataBinding/data-binding-wrapper/data-binding-wrapper.component';
 
 //js modules end
 
@@ -26,7 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
     HelloComponent,
     DataBindingComponent,
     HiddenDirective,
-    NgSwitchNgForNgIfComponent
+    NgSwitchNgForNgIfComponent,
+    DataBindingWrapperComponent
   ],
   imports: [//Other NgModules you are using, so that you can use their declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location. Exports required infrastructure for all Angular apps. Included by default in all Angular apps created with the CLI new command. Re-exports CommonModule and ApplicationModule
