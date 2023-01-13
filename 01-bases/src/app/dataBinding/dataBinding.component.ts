@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -19,14 +19,15 @@ export class dataBindingComponent {
     nombre: string = '';
     telefono = '';
     dni = '';
+    clicked = '';
 
     cambiaDni(valor: any) {
         // Podes consultar el valor por consola
         console.log(valor);
         this.dni = valor;
     }
-
-    onClick() {
-        alert('Hiciste click!!');
+    @Output() emiter: EventEmitter<Event> = new EventEmitter();
+    enviar(e: Event) {
+        this.emiter.emit(e);
     }
 }

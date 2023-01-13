@@ -5,5 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-
+  recibir(e: Event) {//recibe from its child dataBindingComponent
+    console.log(e);
+  }
 }
