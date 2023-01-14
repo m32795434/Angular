@@ -12,7 +12,7 @@ import { HeroesModule } from './heroes/heroes.module';
 import { HiddenDirective } from './dataBinding/hidden.directive';
 import { NgSwitchNgForNgIfComponent } from './ngSwitchNgForNgIf/ngSwitchNgForNgIf.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdDropdownConfig } from './dropDown-config';
+import { NgbdDropdownConfig } from './dropdowns/dropDown-config';
 import { NgbdPopoverAutoclose } from './popOverAutoClose';
 import { CatModule } from './cats/cat.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,15 +28,15 @@ import { DataBindingWrapperComponent } from './dataBinding/data-binding-wrapper/
     DataBindingComponent,
     HiddenDirective,
     NgSwitchNgForNgIfComponent,
-    DataBindingWrapperComponent
+    DataBindingWrapperComponent, NgbdDropdownConfig
   ],
-  imports: [//Other NgModules you are using, so that you can use their declarables.
+  imports: [//Other NgModules you are using, so that you can use their declarables, in this module's declarables.
     BrowserModule,//in order to use browser-specific services such as DOM rendering, sanitization, and location. Exports required infrastructure for all Angular apps. Included by default in all Angular apps created with the CLI new command. Re-exports CommonModule and ApplicationModule
     FormsModule,
     HeroesModule,
     AccountantModule,
     DbzModule,
-    NgbModule, NgbdDropdownConfig, NgbdPopoverAutoclose, CatModule, AppRoutingModule],
+    NgbModule, NgbdPopoverAutoclose, CatModule, AppRoutingModule],
   providers: [],//Here: Providers of services that components in other NgModules can use.(It's for the root injector)
   bootstrap: [AppComponent]//a class//El componente raíz
 })
