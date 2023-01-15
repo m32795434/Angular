@@ -1,10 +1,12 @@
 <p>This dropdown uses customized default values.</p>
 
-<div ngbDropdown>
+<nav ngbDropdown>
     <button type="button" class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Toggle</button>
     <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-        <button type="button" class="button" routerLinkActive="activebutton" routerLink="/accountant"
-            ariaCurrentWhenActive="page" ngbDropdownItem>accountant</button>
+        <a class="button" routerLinkActive="activebutton" routerLink="/accountant" ariaCurrentWhenActive="page"
+            ngbDropdownItem>accountant</a>
+        <a class="button" routerLinkActive="activebutton" routerLink="/accountant/scientificAccountant"
+            ariaCurrentWhenActive="page" ngbDropdownItem>scientificAccountant</a>
         <a class="button" routerLinkActive="activebutton" routerLink="/expressions" ariaCurrentWhenActive="page"
             ngbDropdownItem>expressions</a>
         <a class="button" routerLinkActive="activebutton" routerLink="/heroes" ariaCurrentWhenActive="page"
@@ -18,4 +20,4 @@
         <a class="button" routerLinkActive="activebutton" routerLink="/catApp" ariaCurrentWhenActive="page"
             ngbDropdownItem>catApp</a>
     </div>
-</div>
+</nav>
