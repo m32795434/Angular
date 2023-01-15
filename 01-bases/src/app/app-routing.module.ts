@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'expressions', component: TestingExpressions },
     { path: 'heroes', component: HeroeComponent },
     { path: 'data-binding', component: DataBindingWrapperComponent },
-    { path: 'mainDbz', component: MainPageComponent },
+    { path: 'mainDbz/:name', component: MainPageComponent },
     { path: 'ngSwitch+ngFor', component: NgSwitchNgForNgIfComponent },
     { path: 'catApp', component: CatComponent },
 ];
