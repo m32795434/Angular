@@ -10,6 +10,7 @@ import { DataBindingWrapperComponent } from './dataBinding/data-binding-wrapper/
 import { ScientificAccountantComponent } from './accountant/scientific-accountant.component';
 const routes: Routes = [
     //remember to call the AppRoutingModule from to the father
+    { path: '', redirectTo: 'accountant', pathMatch: 'full' },
     { path: 'accountant', component: AppAccounter, children: [{ path: 'scientificAccountant', component: ScientificAccountantComponent }] },
     { path: 'expressions', component: TestingExpressions },
     { path: 'heroes', component: HeroeComponent },
@@ -17,7 +18,6 @@ const routes: Routes = [
     { path: 'mainDbz', component: MainPageComponent },
     { path: 'ngSwitch+ngFor', component: NgSwitchNgForNgIfComponent },
     { path: 'catApp', component: CatComponent },
-    { path: '', redirectTo: 'accountant', pathMatch: 'full' }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

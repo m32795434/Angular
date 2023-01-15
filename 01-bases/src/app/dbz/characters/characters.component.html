@@ -3,4 +3,9 @@
 <ul>
     <!--before: *ngFor="let char of chars -->
     <li *ngFor="let char of characters">{{char.name}} - {{char.power | number}}</li>
+    <select name="charSelect" id="charSelect" [(ngModel)]="selected">
+        <option value="">Select a char</option>
+        <option *ngFor="let char of characters" value="{{char.name}}">{{char.name}}</option>
+    </select>
+    <p>{{selectedStory}}</p>
 </ul>
