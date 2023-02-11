@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     templateUrl: 'dataBinding.html'
 })
 export class DataBindingComponent {
-    shouldHidde = true;//we have a hidden Directive(), a hidden attribute and property. They are working together. This may bring us conflict
+    shouldHidde = false;//we have a hidden Directive(which could do anything, and it's applied always)and a hidden property binding[].
     firstName: string = 'Manuel';
     lastName: string = 'Bravard';
     blue: string = 'blue';

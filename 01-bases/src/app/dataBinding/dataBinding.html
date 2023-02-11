@@ -4,9 +4,9 @@
 <!-- data binding: from the component to the view -->
 <!-- using the interpolation technique.  -->
 <div><strong>{{firstName}}</strong></div>
-<!-- Let's consider another example using property binding. -->
+<!-- Let's consider another example using PROPERTY binding. -->
 <span [innerHTML]="lastName">-Directive-</span>
-<!-- example of style binding (property binding). -->
+<!-- example of style binding (property binding). "blue" is a variable, it's not text-->
 <h1 [style.color]="blue">I am a blue h1, and I'm using a Directive</h1>
 <!-- Property and attribute comparison -->
 <input [disabled]="!(val.trim())? true : false">
@@ -26,9 +26,10 @@
 <br>
 Please enter some text:<input type="text" [(ngModel)]="val"><br>
 Text entered: {{val.trim()}}
-<p [hidden]="shouldHidde" [ngClass]="{'special':shouldHidde, 'wrap': shouldHidde, 'dark':shouldHidde}">Lorem ipsum
-    dolor, sit amet consectetur adipisicing elit. Debitis iusto incidunt eius enim nemo, itaque id! Dolorum dignissimos
-    cum natus voluptates pariatur autem praesentium? Eos voluptatum obcaecati explicabo odit assumenda.</p>
+<p [hidden]="shouldHidde" [ngClass]="{'special':shouldHidde, 'wrap': shouldHidde, 'dark':shouldHidde}">This
+    simultaneously apply the hidden directive and sets the hidden property (property [] binding) with the shouldHide
+    value. If shouldHide===false, the classes doesn't apply and the p.hidden = false. The directive also highlights with
+    yellow</p>
 
 <!-- Arg Programa Example -->
 <h2>Formlario con binding</h2>
