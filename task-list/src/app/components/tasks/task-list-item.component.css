@@ -9,6 +9,7 @@
     border-left: 5px solid green;
 }
 
-.task h3 {
-    text-align: center;
+.task>div {
+    display: flex;
+    justify-content: space-between;
 }
