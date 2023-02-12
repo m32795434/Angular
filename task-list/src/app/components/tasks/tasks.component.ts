@@ -9,17 +9,18 @@ import { TaskIterface } from 'src/app/task';
 export class TasksComponent implements OnInit {
   constructor(private taskSrv: TaskService) { }
   tasks: TaskIterface[] = [];
+
+  updateTasks() {
+    this.taskSrv.getTasks().subscribe((tasks) => { this.tasks = tasks; })
+  }
   ngOnInit(): void {
-    const subs = this.taskSrv.getTasks().subscribe((tasks) => { this.tasks = tasks; });
-    console.log('subs', subs);
+    this.updateTasks();
   }
   delete(task: TaskIterface) {
     this.taskSrv.deleteTask(task).subscribe(() => {
       console.log('item deleted');
-      this.taskSrv.getTasks().subscribe((tasks) => {
-        this.tasks = tasks;
-      })
+      this.updateTasks();
     });
-
   }
+
 }

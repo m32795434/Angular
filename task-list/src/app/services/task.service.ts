@@ -14,9 +14,7 @@ export class TaskService {
   ) { }
 
   getTasks(): Observable<TaskIterface[]> {
-    const obs = this.http.get<TaskIterface[]>(this.apiUrl);
-    console.log('obs', obs);
-    return obs;
+    return this.http.get<TaskIterface[]>(this.apiUrl);
   }
   deleteTask(task: TaskIterface): Observable<TaskIterface> {
     return this.http.delete<TaskIterface>(`${this.apiUrl}/${task.id}`)
