@@ -22,5 +22,7 @@ export class TasksComponent implements OnInit {
       this.updateTasks();
     });
   }
-
+  toggleReminder(task: TaskIterface) {
+    task.reminder = !task.reminder;
+  }
 }

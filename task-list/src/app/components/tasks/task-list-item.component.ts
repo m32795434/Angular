@@ -11,6 +11,7 @@ import { TaskIterface } from '../../task';
 export class TaskListItemComponent {
   constructor(private taskService: TaskService) { }
   @Output() onDeleteTask: EventEmitter<TaskIterface> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<TaskIterface> = new EventEmitter();
   @Input() task: TaskIterface = {
     id: 1,
     text: '',
@@ -21,8 +22,8 @@ export class TaskListItemComponent {
   onDelete() {
     this.onDeleteTask.emit();
   }
-  toogleReminder() {
-    this.task.reminder = !this.task.reminder;
+  ondblclickTask() {
+    this.onToggleReminder.emit();
   }
 
 }
