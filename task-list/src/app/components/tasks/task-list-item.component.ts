@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { TaskService } from 'src/app/services/task.service';
 import { TaskIterface } from '../../task';
@@ -10,7 +10,7 @@ import { TaskIterface } from '../../task';
 })
 export class TaskListItemComponent {
   constructor(private taskService: TaskService) { }
-  // private apiUrl = 'http://localhost:5000/tasks';
+  @Output() onDeleteTask: EventEmitter<TaskIterface> = new EventEmitter();
   @Input() task: TaskIterface = {
     id: 1,
     text: '',
@@ -19,7 +19,7 @@ export class TaskListItemComponent {
   };
   faTimes = faTimes;
   onDelete() {
-    console.log('deleting item', this.task)
+    this.onDeleteTask.emit();
   }
 
 }

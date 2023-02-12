@@ -14,9 +14,13 @@ export class TaskService {
   ) { }
 
   getTasks(): Observable<TaskIterface[]> {
-    return this.http.get<TaskIterface[]>(this.apiUrl);
+    const obs = this.http.get<TaskIterface[]>(this.apiUrl);
+    console.log('obs', obs);
+    return obs;
   }
-
+  deleteTask(task: TaskIterface): Observable<TaskIterface> {
+    return this.http.delete<TaskIterface>(`${this.apiUrl}/${task.id}`)
+  }
   //traditional fetch work ok-->
   // async ngOnInit(): Promise<any> {
   //   const response = await fetch(this.apiUrl, { method: 'GET', headers: { Accept: 'application/json' } });
