@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
-import { Task } from 'src/app/task';
-import { Observable } from 'rxjs';
+import { TaskIterface } from 'src/app/task';
 
 @Component({
   selector: 'app-tasks',
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TasksComponent implements OnInit {
   constructor(private taskSrv: TaskService) { }
-  tasks: Task[] = [];
+  tasks: TaskIterface[] = [];
   ngOnInit(): void {
     this.taskSrv.getTasks().subscribe((tasks) => { this.tasks = tasks });
   }

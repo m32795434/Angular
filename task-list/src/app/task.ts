@@ -1,4 +1,4 @@
-export interface Task {
+export interface TaskIterface {
     id?: number;
     text: string;
     day: string;

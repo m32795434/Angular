@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { TASKS } from 'src/app/mock-tasks';
+import { TaskService } from 'src/app/services/task.service';
+import { TaskIterface } from '../../task';
 
 @Component({
   selector: 'app-task-list-item',
@@ -8,6 +9,17 @@ import { TASKS } from 'src/app/mock-tasks';
   styleUrls: ['./task-list-item.component.css']
 })
 export class TaskListItemComponent {
-  @Input() task = TASKS[0];
+  constructor(private taskService: TaskService) { }
+  // private apiUrl = 'http://localhost:5000/tasks';
+  @Input() task: TaskIterface = {
+    id: 1,
+    text: '',
+    day: '',
+    reminder: true,
+  };
   faTimes = faTimes;
+  onDelete() {
+    console.log('deleting item', this.task)
+  }
+
 }
