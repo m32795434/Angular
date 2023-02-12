@@ -21,5 +21,8 @@ export class TaskListItemComponent {
   onDelete() {
     this.onDeleteTask.emit();
   }
+  toogleReminder() {
+    this.task.reminder = !this.task.reminder;
+  }
 
 }
