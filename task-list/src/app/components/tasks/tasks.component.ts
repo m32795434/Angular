@@ -24,5 +24,6 @@ export class TasksComponent implements OnInit {
   }
   toggleReminder(task: TaskIterface) {
     task.reminder = !task.reminder;
+    this.taskSrv.updateTaskReminder(task).subscribe(() => console.log('item updated'))
   }
 }

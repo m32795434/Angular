@@ -9,6 +9,7 @@ import { TaskIterface } from '../task';
 })
 export class TaskService {
   private apiUrl = 'http://localhost:5000/tasks';
+  private config = { headers: { 'Content-Type': 'application/json' } };
   constructor(
     private http: HttpClient
   ) { }
@@ -18,6 +19,10 @@ export class TaskService {
   }
   deleteTask(task: TaskIterface): Observable<TaskIterface> {
     return this.http.delete<TaskIterface>(`${this.apiUrl}/${task.id}`)
+  }
+
+  updateTaskReminder(task: TaskIterface): Observable<TaskIterface> {
+    return this.http.put<TaskIterface>(`${this.apiUrl}/${task.id}`, task, this.config)
   }
   //traditional fetch work ok-->
   // async ngOnInit(): Promise<any> {
