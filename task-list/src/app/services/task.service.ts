@@ -22,9 +22,14 @@ export class TaskService {
   }
 
   updateTaskReminder(task: TaskIterface): Observable<TaskIterface> {
-    return this.http.put<TaskIterface>(`${this.apiUrl}/${task.id}`, task, this.config)
+    return this.http.put<TaskIterface>(`${this.apiUrl}/${task.id}`, task, this.config);
   }
+
+
   //traditional fetch work ok-->
+  //put
+  //await fetch(`${this.apiUrl}/${task.id}`, { method: "PUT", body: JSON.stringify(task), headers: { "Content-Type": "application/json" } })
+  //get
   // async ngOnInit(): Promise<any> {
   //   const response = await fetch(this.apiUrl, { method: 'GET', headers: { Accept: 'application/json' } });
   //   const result = await response.json();
