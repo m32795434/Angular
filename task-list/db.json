@@ -4,7 +4,7 @@
       "id": 1,
       "text": "Terminar primer módulo de Angular",
       "day": "Agosto 15",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 2,
@@ -19,10 +19,10 @@
       "reminder": true
     },
     {
-      "id": 4,
-      "text": "Terminar segundo módulo de Typescript",
-      "day": "Noviembre 15",
-      "reminder": true
+      "text": "Cocinar Rico",
+      "day": "12 am 15/08",
+      "reminder": true,
+      "id": 5
     }
   ]
 }

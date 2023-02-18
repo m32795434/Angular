@@ -26,4 +26,11 @@ export class TasksComponent implements OnInit {
     task.reminder = !task.reminder;
     this.taskSrv.updateTaskReminder(task).subscribe(() => console.log('item updated'))
   }
+  addTask(task: TaskIterface) {
+    console.log(task);
+    this.taskSrv.createTask(task).subscribe((item) => {
+      console.log('item created', item)
+      this.updateTasks();
+    })
+  }
 }

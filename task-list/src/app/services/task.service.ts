@@ -20,9 +20,11 @@ export class TaskService {
   deleteTask(task: TaskIterface): Observable<TaskIterface> {
     return this.http.delete<TaskIterface>(`${this.apiUrl}/${task.id}`)
   }
-
   updateTaskReminder(task: TaskIterface): Observable<TaskIterface> {
     return this.http.put<TaskIterface>(`${this.apiUrl}/${task.id}`, task, this.config);
+  }
+  createTask(task: TaskIterface): Observable<TaskIterface> {
+    return this.http.post<TaskIterface>(`${this.apiUrl}/`, task, this.config);
   }
 
 
