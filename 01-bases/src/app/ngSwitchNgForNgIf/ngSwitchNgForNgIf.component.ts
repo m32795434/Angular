@@ -24,8 +24,14 @@ export class NgSwitchNgForNgIfComponent {
         console.log(this.revelar_identidad)
     }
     selectArmor(e: any) {
-        this.usar = e.target.value;
-        this.default = false;
-        console.log(e.target.value)
+        const val = e.target.value;
+        console.log(val)
+        if (val) {
+            this.usar = val;
+            this.default = false;
+        } else {
+            this.usar = this.armaduras[2];
+            this.default = true;
+        }
     }
 }

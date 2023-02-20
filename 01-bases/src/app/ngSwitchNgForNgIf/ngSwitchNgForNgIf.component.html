@@ -20,19 +20,22 @@
 </ng-template>
 
 <label for="select-armor">Select Armor</label><br>
-<select name="armor" id="armor" (input)="selectArmor($event)">
+<select name="select-armor" id="select-armor" (input)="selectArmor($event)">
     <option value=""> - Select Armor - </option>
     <option *ngFor="let armadura of armaduras" [value]="armadura">{{armadura}}</option>
 </select>
 <h2>Uso de *ngFor con *ngSwitch</h2>
 <p>Las armaduras usadas por IronMan son:</p>
+
+<!-- ngSwitchCase Stores the HTML template to be selected on match. -->
 <ul [ngSwitch]="usar">
     <li *ngFor="let armadura of armaduras">
         {{armadura}}<strong *ngSwitchCase="armadura">{{default? ' - Default -':' - Selected! -'}}</strong>
     </li>
 </ul>
 
-<h2>Uso de *ngSwitch con *ngSwitchCase</h2>
+<h2>Uso de *ngSwitch con *ngSwitchCase</h2> <br>
+<h5>Heroe Selected</h5>
 <ul [ngSwitch]="superhero">
     <li *ngSwitchCase="'Groot'">Groot</li>
     <li *ngSwitchCase="'Ironman'">Ironman</li>
