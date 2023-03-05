@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 // import { TASKS } from '../mock-tasks';
 import { TaskIterface } from '../task';
@@ -15,7 +15,9 @@ export class TaskService {
   ) { }
 
   getTasks(): Observable<TaskIterface[]> {
-    return this.http.get<TaskIterface[]>(this.apiUrl);
+    const pepe = of(this.apiUrl)
+    const items = this.http.get<TaskIterface[]>(this.apiUrl);
+    return items;
   }
   deleteTask(task: TaskIterface): Observable<TaskIterface> {
     return this.http.delete<TaskIterface>(`${this.apiUrl}/${task.id}`)

@@ -1,18 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Terminar primer módulo de Angular",
-      "day": "Agosto 15",
-      "reminder": false
-    },
-    {
-      "id": 2,
-      "text": "Terminar Segundo módulo de Angular",
-      "day": "Septiembre 15",
-      "reminder": true
-    },
-    {
       "id": 3,
       "text": "Terminar primer módulo de Typescript",
       "day": "Octubre 15",
@@ -23,6 +11,18 @@
       "day": "12 am 15/08",
       "reminder": true,
       "id": 5
+    },
+    {
+      "text": "Ir al correo",
+      "day": "SAbado a las 12",
+      "reminder": true,
+      "id": 6
+    },
+    {
+      "text": "pepe",
+      "day": "mañana",
+      "reminder": true,
+      "id": 7
     }
   ]
 }

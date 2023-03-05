@@ -1,5 +1,5 @@
-import { Task } from './task';
-export const TASKS: Task[] = [
+import { TaskIterface } from './task';
+export const TASKS: TaskIterface[] = [
     {
         id: 1,
         text: 'Terminar primer módulo de Angular',

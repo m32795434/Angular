@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { TaskService } from 'src/app/services/task.service';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { TaskIterface } from '../../task';
 
 @Component({
@@ -9,7 +8,6 @@ import { TaskIterface } from '../../task';
   styleUrls: ['./task-list-item.component.css']
 })
 export class TaskListItemComponent {
-  constructor(private taskService: TaskService) { }
   @Output() onDeleteTask: EventEmitter<TaskIterface> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<TaskIterface> = new EventEmitter();
   @Input() task: TaskIterface = {
@@ -18,7 +16,7 @@ export class TaskListItemComponent {
     day: '',
     reminder: true,
   };
-  faTimes = faTimes;
+  faTrashCan = faTrashCan;
   onDelete() {
     this.onDeleteTask.emit();
   }
