@@ -12,7 +12,15 @@ import { TaskListItemComponent } from './components/tasks/task-list-item.compone
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AppRoutingModule } from './app-routing.module';
+
+// import { AppRoutingModule } from './app-routing.module';
+//DEFINIMOS ACÁ EL ROUTER Y LE PASAMOS LAS RUTAS
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: AboutComponent },
+  { path: 'taskComp', component: TasksComponent }
+]
 
 @NgModule({
   declarations: [
@@ -28,7 +36,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    HttpClientModule, FormsModule, AppRoutingModule
+    HttpClientModule, FormsModule, RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <header>
     <h1>{{title}}</h1>
     <!-- [text]="showAddTask? 'Close':'Add'" ES OTRA FORMA!-->
-    <app-button [color]="showAddTask? 'red':'green'" text="{{showAddTask? 'Close':'Add'}}"></app-button>
+    <app-button *ngIf="hasHeaderRoute('/taskComp')" [color]="showAddTask? 'red':'green'"
+        text="{{showAddTask? 'Close':'Add'}}"></app-button>
 </header>
 <!-- (btnClick)="toggleAddTask()" -->
-<!-- *ngIf="hasHeaderRoute('/taskComp')" -->
